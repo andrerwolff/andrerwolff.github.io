@@ -5,3 +5,5 @@ Followed this tutorial:
 http://jmcglone.com/guides/github-pages/
 also check here:
 https://jekyllrb.com/docs/step-by-step/01-setup/
+
+run jekyll server --livereload from root directory while developing
