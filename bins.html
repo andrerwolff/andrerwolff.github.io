@@ -1,0 +1,13 @@
+---
+title: Bins
+---
+<h1>Bins</h1>
+
+<ul>
+    {% for bin in site.bins %}
+        <li>
+            <h2><a href="{{ bin.url }}">{{ bin.bin_name }}</a></h2>
+            <p>{{ bin.content | markdownify }}</p>
+        </li>
+    {% endfor %}
+</ul>

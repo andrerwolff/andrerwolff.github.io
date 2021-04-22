@@ -1,3 +1,20 @@
-name: Andre Wolff's Personal Site
-markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
+collections:
+  bins:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "bins"
+    values:
+      layout: "bin"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
