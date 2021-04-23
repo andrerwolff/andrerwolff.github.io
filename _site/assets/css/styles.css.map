@@ -7,8 +7,8 @@
 	],
 	"sourcesContent": [
 		"@import \"main\";",
-		".current {\r\n    color: green;\r\n  }"
+		".current {\r\n    color: green;\r\n  }\r\n\r\n.page__title {\r\n    margin-top: 0;\r\n    line-height: 1;\r\n  \r\n    & + .page__meta {\r\n      margin-top: -0.5em;\r\n    }\r\n  }"
 	],
 	"names": [],
-	"mappings": "ACAA,AAAA,QAAQ,CAAC,EACL,KAAK,EAAE,KAAK,GACb"
+	"mappings": "ACAA,AAAA,QAAQ,CAAC,EACL,KAAK,EAAE,KAAK,GACb;;AAEH,AAAA,YAAY,CAAC,EACT,UAAU,EAAE,CAAC,EACb,WAAW,EAAE,CAAC,GAKf;;AAPH,AAII,YAJQ,GAIJ,WAAW,CAAC,EACd,UAAU,EAAE,MAAM,GACnB"
 }

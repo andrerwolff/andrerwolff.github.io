@@ -1,13 +1,10 @@
+permalink: /:categories/:title/
+
 collections:
   bins:
     output: true
 
 defaults:
-  - scope:
-      path: ""
-      type: "bins"
-    values:
-      layout: "bin"
   - scope:
       path: ""
       type: "posts"
