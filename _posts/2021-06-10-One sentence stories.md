@@ -7,4 +7,4 @@ group: content
 - _Tower of Shinar_: Humanity celebrates the founding of a global government by constructing a tower reaching toward the heavens, neither the tower nor the unity last long.
 - _Swatter_: A quirky group of scientists and engineers make their first and last voyage on their experimental craft through a wormhole.
 - _Eagle Day_: A parallel universe where Benjamin Franklin convinced Thomas Jefferson and John Adams that the turkey should be the national bird.
-- _Josh_: A computer scientist uploads his mind into his lifelong simulation project to save it.
+- _Josh_: A computer scientist working on a cutting edge simulation uploads his mind into his project to save it.
