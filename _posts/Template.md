@@ -1,0 +1,5 @@
+---
+category: blog/{}
+group: {}
+---
+{CONTENT}
