@@ -3,12 +3,16 @@
 	"file": "styles.css",
 	"sources": [
 		"styles.scss",
-		"_sass/main.scss"
+		"_sass/main.scss",
+		"_sass/_colors.scss",
+		"_sass/_typography.scss"
 	],
 	"sourcesContent": [
-		"@import \"main\";",
-		".current {\r\n    color: green;\r\n  }\r\n\r\n.page__title {\r\n    margin-top: 0;\r\n    line-height: 1;\r\n  \r\n    & + .page__meta {\r\n      margin-top: -0.5em;\r\n    }\r\n  }"
+		"@import \"main\";\n@import \"colors\";\n@import \"typography\";\n\n$bg: #333;\n$text: #fff;\nbody {\n    margin: 0;\n    font-family: $ff-s;\n    display: grid;\n    grid-template-columns: \n        1fr [container-start]\n        repeat(6, minmax(50px, 250px))\n        [container-end] 1fr;   \n}\n\n.title-area {\n    background: $clr-blue;\n    grid-column: 1 / 9;\n    padding: 1em 0;\n    text-align: center;\n    color: $clr-white;\n    margin-bottom: 1em;\n}\n\n.title {\n    font-family: $ff-ss;\n    text-transform: uppercase;\n    font-size: 6rem;\n    margin: 0;\n}\n\np {\n    grid-column: 3 / 6;\n}\n\nfooter {\n    background: $clr-pink;\n    grid-column: 1 / 9;\n    padding: 0.1em 0;\n    text-align: center;\n    color: $clr-white;\n}",
+		".current {\r\n    color: green;\r\n  }\r\n\r\n.page__title {\r\n    margin-top: 0;\r\n    line-height: 1;\r\n  \r\n    & + .page__meta {\r\n      margin-top: -0.5em;\r\n    }\r\n  }",
+		"$clr-white: white;\r\n$clr-blue: #1985A1;\r\n$clr-pink: #E63462;\r\n$clr-black: #222;\r\n$l1: #feb79c;\r\n$l2: #ffe5d1;\r\n$l3: #ACAFC6;\r\n$l4: #316286;\r\n$l5: #1d3e5e;\r\n$l6: #1e2636;\r\n$l7: #181e2a;",
+		"@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Pathway+Gothic+One&display=swap');\r\n$ff-ss: 'Pathway Gothic One', sans-serif;\r\n$ff-s: 'Cardo', serif;"
 	],
 	"names": [],
-	"mappings": "ACAA,AAAA,QAAQ,CAAC,EACL,KAAK,EAAE,KAAK,GACb;;AAEH,AAAA,YAAY,CAAC,EACT,UAAU,EAAE,CAAC,EACb,WAAW,EAAE,CAAC,GAKf;;AAPH,AAII,YAJQ,GAIJ,WAAW,CAAC,EACd,UAAU,EAAE,MAAM,GACnB"
+	"mappings": "AGAA,OAAO,CAAC,wHAAI;AFAZ,AAAA,QAAQ,CAAC,EACL,KAAK,EAAE,KAAK,GACb;;AAEH,AAAA,YAAY,CAAC,EACT,UAAU,EAAE,CAAC,EACb,WAAW,EAAE,CAAC,GAKf;;AAPH,AAII,YAJQ,GAIJ,WAAW,CAAC,EACd,UAAU,EAAE,MAAM,GACnB;;ADJL,AAAA,IAAI,CAAC,EACD,MAAM,EAAE,CAAC,EACT,WAAW,EGNR,OAAO,EAAE,KAAK,EHOjB,OAAO,EAAE,IAAI,EACb,qBAAqB,EACjB,GAAG,EAAE,eAAe,EACpB,8BAA8B,EAC7B,aAAa,EAAE,GAAG,GAC1B;;AAED,AAAA,WAAW,CAAC,EACR,UAAU,EEhBH,OAAO,EFiBd,WAAW,EAAE,KAAK,EAClB,OAAO,EAAE,KAAK,EACd,UAAU,EAAE,MAAM,EAClB,KAAK,EErBG,KAAK,EFsBb,aAAa,EAAE,GAAG,GACrB;;AAED,AAAA,MAAM,CAAC,EACH,WAAW,EGzBP,oBAAoB,EAAE,UAAU,EH0BpC,cAAc,EAAE,SAAS,EACzB,SAAS,EAAE,IAAI,EACf,MAAM,EAAE,CAAC,GACZ;;AAED,AAAA,CAAC,CAAC,EACE,WAAW,EAAE,KAAK,GACrB;;AAED,AAAA,MAAM,CAAC,EACH,UAAU,EEnCH,OAAO,EFoCd,WAAW,EAAE,KAAK,EAClB,OAAO,EAAE,OAAO,EAChB,UAAU,EAAE,MAAM,EAClB,KAAK,EEzCG,KAAK,GF0ChB"
 }

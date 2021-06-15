@@ -1,7 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Pathway+Gothic+One&display=swap");
 .current { color: green; }
 
 .page__title { margin-top: 0; line-height: 1; }
 
 .page__title + .page__meta { margin-top: -0.5em; }
+
+body { margin: 0; font-family: "Cardo", serif; display: grid; grid-template-columns: 1fr [container-start] repeat(6, minmax(50px, 250px)) [container-end] 1fr; }
+
+.title-area { background: #1985A1; grid-column: 1 / 9; padding: 1em 0; text-align: center; color: white; margin-bottom: 1em; }
+
+.title { font-family: "Pathway Gothic One", sans-serif; text-transform: uppercase; font-size: 6rem; margin: 0; }
+
+p { grid-column: 3 / 6; }
+
+footer { background: #E63462; grid-column: 1 / 9; padding: 0.1em 0; text-align: center; color: white; }
 
 /*# sourceMappingURL=styles.css.map */

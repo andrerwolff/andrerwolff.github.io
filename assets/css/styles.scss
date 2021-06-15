@@ -1,3 +1,45 @@
 ---
 ---
 @import "main";
+@import "colors";
+@import "typography";
+
+$bg: #333;
+$text: #fff;
+body {
+    margin: 0;
+    font-family: $ff-s;
+    display: grid;
+    grid-template-columns: 
+        1fr [container-start]
+        repeat(6, minmax(50px, 250px))
+        [container-end] 1fr;   
+}
+
+.title-area {
+    background: $clr-blue;
+    grid-column: 1 / 9;
+    padding: 1em 0;
+    text-align: center;
+    color: $clr-white;
+    margin-bottom: 1em;
+}
+
+.title {
+    font-family: $ff-ss;
+    text-transform: uppercase;
+    font-size: 6rem;
+    margin: 0;
+}
+
+p {
+    grid-column: 3 / 6;
+}
+
+footer {
+    background: $clr-pink;
+    grid-column: 1 / 9;
+    padding: 0.1em 0;
+    text-align: center;
+    color: $clr-white;
+}
