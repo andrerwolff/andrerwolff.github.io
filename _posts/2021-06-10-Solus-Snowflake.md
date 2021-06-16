@@ -1,7 +1,9 @@
 ---
 category: blog/writing
 group: solus
+snip: Short summary of the snowflake method of writing a novel.
 ---
+{: style="text-align:center"}
 ![Snowflake](\assets\images\Von_Koch_curve.gif)
 
 I recently was reading obout a method that helps in developing complex ideas in a controlled and more straight forward way. It's called the [Snowflake Method](https://www.advancedfictionwriting.com/articles/snowflake-method/). I will summarize the method here:

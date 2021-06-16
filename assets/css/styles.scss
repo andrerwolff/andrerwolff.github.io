@@ -4,42 +4,90 @@
 @import "colors";
 @import "typography";
 
-$bg: #333;
-$text: #fff;
-body {
+html, body {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    background: $clr-off_white;
+}
+article {
+    height: 100%;
     margin: 0;
     font-family: $ff-s;
     display: grid;
     grid-template-columns: 
         1fr [container-start]
-        repeat(6, minmax(50px, 250px))
-        [container-end] 1fr;   
+        repeat(6, minmax(50px, 150px))
+        [container-end] 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 1em 2em;
 }
-
 .title-area {
-    background: $clr-blue;
+    background: $clr-dark;
     grid-column: 1 / 9;
     padding: 1em 0;
     text-align: center;
-    color: $clr-white;
-    margin-bottom: 1em;
+    color: $clr-off_white;
+    margin-bottom: 2em;
 }
 
 .title {
+    color: $clr-off_white;
     font-family: $ff-ss;
     text-transform: uppercase;
     font-size: 6rem;
     margin: 0;
 }
 
+.sub-title {
+    font-family: $ff-s;
+    color: $clr-gray;
+    width: 33%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content {
+    font-family: $ff-s;
+    color: $clr-dark;
+    grid-column: 3 / 7;
+    margin: 0;
+}
+
+a:link {color: $clr-dark;}
+a:visited {color: $clr-accent;}
+a:hover {color: $clr-accent;}
+a:active {color: $clr-gray;}
+
+h1 {
+    grid-column: 2 / 9;
+    font-family: $ff-ss;
+    color: $clr-dark;
+    margin: 0;
+}
+
 p {
-    grid-column: 3 / 6;
+    grid-column: 3 / 7;
+    margin: 1em;
+}
+
+ul {
+    grid-column: 3 / 7;
+    margin-top: 0;
+}
+
+ol {
+    grid-column: 3/7;
+    margin-top: 0;
 }
 
 footer {
-    background: $clr-pink;
+    margin-top: 2em;
+    background: $clr-accent;
     grid-column: 1 / 9;
-    padding: 0.1em 0;
+    padding: .5em 0;
     text-align: center;
-    color: $clr-white;
+    color: $clr-dark;
+    margin-bottom: 0;
 }

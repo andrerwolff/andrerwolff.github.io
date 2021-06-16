@@ -1,5 +1,5 @@
 ---
 title: Home
-description: Text Text Taroo
+description: Safe. Warm. Soft. Home.
 ---
-This is my home screen! Within it lives all the things that will make you feel comfortable and safe and warm. Don't leave... It's safe here...
+**Andre's Personal Website** - Designed and Maintained by Me! All content herein reflects my ideas at the time of writing. I reserve the right to change and grow and develop my thoughts.

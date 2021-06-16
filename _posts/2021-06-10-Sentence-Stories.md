@@ -1,6 +1,7 @@
 ---
 category: blog/writing
 group: content
+snip: List of single sentence hooks for story ideas to be fleshed out.
 ---
 
 #### Below are some story ideas to be fleshed out or forever ignored:

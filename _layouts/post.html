@@ -1,10 +1,23 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href={{ "assets/css/styles.css" | relative_url }}>
+  </head>
 
-<h1>{{ page.title }}</h1>
+  <body>
+    <article>
+      <div class="title-area">
+        <img src={{"assets/images/logo.png" | relative_url }} class="logo">
+        <h1 class="title"> {{ page.title }} </h1>
+        <p class="sub-title"> {{ page.date | date_to_string: "ordinal", "US" }} </p> 
+      </div>
+      <div class="content">{{ content }}</div>
+      <footer>
+        <p>Footer Text</p>
+      </footer>
+    </article>
+  </body>
+</html>
 
-<p><strong><u>{{ page.date | date_to_string: "ordinal", "US" }}</u></strong></p>
-<hr />
-{{ content }}
-<hr />

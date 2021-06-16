@@ -1,6 +1,7 @@
 ---
 category: blog/programming
 group: web
+snip: How to add a page in Jekyll
 ---
 #### Adding A Page  
 To add a page to your Jekyll-built site (i.e. Blog, About) follow these steps:  
