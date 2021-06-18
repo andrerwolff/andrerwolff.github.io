@@ -1,6 +1,0 @@
-<nav>
-    {% for item in site.data.navigation %}
-        {% assign path = page.url | replace: "/", '' %}
-    <a href="{{ item.link }}" {% if page.url contains item.link and item.link != "/" or path == "" %}class="current"{% endif %}>{{ item.name }}</a>
-    {% endfor %}
-</nav>
