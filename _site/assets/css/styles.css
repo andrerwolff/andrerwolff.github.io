@@ -7,7 +7,7 @@
 
 html, body { width: 100%; height: 100%; margin-top: 0; margin-left: 0; background: #F4F4EF; }
 
-article { height: 100%; margin: 0; font-family: "Cardo", serif; display: grid; grid-template-columns: 1fr [container-start] repeat(6, minmax(50px, 150px)) [container-end] 1fr; grid-template-rows: auto 1fr auto; grid-gap: 1em 2em; }
+article { height: 100%; margin: 0; font-family: "Cardo", serif; display: grid; grid-template-columns: 1fr [container-start] repeat(6, minmax(50px, 150px)) [container-end] 1fr; grid-template-rows: auto 1fr auto; gap: 0 2em; }
 
 .title-area { background: #20232A; grid-column: 1 / 9; padding: 1em 0; text-align: center; color: #F4F4EF; margin-bottom: 2em; }
 
@@ -15,24 +15,46 @@ article { height: 100%; margin: 0; font-family: "Cardo", serif; display: grid; g
 
 .sub-title { font-family: "Cardo", serif; color: #ACBEBE; width: 33%; margin-left: auto; margin-right: auto; }
 
-.content { font-family: "Cardo", serif; color: #20232A; grid-column: 3 / 7; margin: 0; }
+.content { font-family: "Cardo", serif; color: #20232A; grid-column: 3 / 7; margin-bottom: 3em; }
+
+.last-post { background: #F4F4EF; grid-column: 3 / 7; color: #20232A; }
+
+.older-posts { background: #20232A; grid-column: 1 / 9; padding: 2em 0; color: #ACBEBE; display: grid; grid-template-columns: inherit; gap: inherit; }
+
+.older-posts h2 { grid-column: 2 / 8; color: #4a5256; }
+
+.older-posts .blog__title { color: #a77e81; }
+
+.older-posts .blog__title:hover { color: #a23d44; }
+
+.blog-post { grid-column: span 2; color: inherit; }
+
+.blog-post:first-of-type { grid-column: 2 / 4; }
+
+.blog__title { font-family: "Pathway Gothic One", sans-serif; font-size: 1.5em; color: #A01D26; line-height: 1; text-decoration: none; text-transform: uppercase; transition: color ease-out 300ms; }
+
+.blog__title:hover { color: #ACBEBE; }
+
+.blog__link { font-family: "Pathway Gothic One", sans-serif; display: inline-block; background: #a88e90; color: #20232A; padding: .5em 1.5em; text-decoration: none; text-transform: uppercase; margin-top: 1em; transition: background 300ms, color 600ms ease-out; }
+
+.blog__link:visited { color: #20232A; }
+
+.blog__link:hover { background: #a23d44; color: #F4F4EF; }
 
 a:link { color: #20232A; }
 
 a:visited { color: #A01D26; }
 
-a:hover { color: #A01D26; }
-
 a:active { color: #ACBEBE; }
+
+a:hover { color: #ACBEBE; }
 
 h1 { grid-column: 2 / 9; font-family: "Pathway Gothic One", sans-serif; color: #20232A; margin: 0; }
 
-p { grid-column: 3 / 7; margin: 1em; }
+p, h2, ol { grid-column: 3 / 7; margin: 0; color: inherit; }
 
-ul { grid-column: 3 / 7; margin-top: 0; }
+h2 { font-family: "Pathway Gothic One", sans-serif; font-size: 2em; margin-top: 1em; text-transform: uppercase; }
 
-ol { grid-column: 3/7; margin-top: 0; }
-
-footer { margin-top: 2em; background: #A01D26; grid-column: 1 / 9; padding: .5em 0; text-align: center; color: #20232A; margin-bottom: 0; }
+footer { background: #A01D26; grid-column: 1 / 9; padding: 1em 0; text-align: center; color: #20232A; margin-bottom: 0; }
 
 /*# sourceMappingURL=styles.css.map */
