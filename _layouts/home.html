@@ -23,7 +23,7 @@ layout: default
   <h2>Older Posts</h2>
     {% for post in site.posts offset:1 limit:3 %}
     <div class="blog-post">
-      <a class="blog__title" href="{{post.url }}">{{ post.title }} - {{post.date | date_to_string: "ordinal", "US" }}</a></h2>
+      <a class="blog__title" href="{{ post.url }}">{{ post.title }} - {{post.date | date_to_string: "ordinal", "US" }}</a></h2>
       <p>
         {% if post.snip  == 'excerpt' %} 
           {{post.excerpt}}
@@ -31,7 +31,7 @@ layout: default
           {{post.snip}}
         {% endif %}
       </p>
-      <a class="blog__link" href="{{post.url }}">Read More</a>
+      <a class="blog__link" href="{{ post.url }}">Read More</a>
     </div>
     {% endfor %}
 </section>

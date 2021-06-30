@@ -128,10 +128,32 @@ article {
     }
 }
 
+.attachment_link {
+    font-family: $ff-ss;
+    font-size: 1.25em;
+    color: $clr-accent;
+    line-height: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color ease-out 300ms;
+    &:link{
+        color: $clr-dark
+    }
+    &:visited {
+        color: mix($clr-accent, $clr-gray, 30%);
+    }
+    &:hover {
+        color: $clr-accent;
+    }
+   
+
+}
+
 a:link {color: $clr-dark;}
 a:visited {color: $clr-accent;}
-a:active {color: $clr-gray;}
 a:hover {color: $clr-gray;}
+a:active {color: $clr-gray;}
+
 
 h1 {
     grid-column: 2 / 9;

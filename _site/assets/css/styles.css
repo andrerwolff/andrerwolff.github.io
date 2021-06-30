@@ -41,13 +41,21 @@ article { height: 100%; margin: 0; font-family: "Cardo", serif; display: grid; g
 
 .blog__link:hover { background: #a23d44; color: #F4F4EF; }
 
+.attachment_link { font-family: "Pathway Gothic One", sans-serif; font-size: 1.25em; color: #A01D26; line-height: 1; text-decoration: none; text-transform: uppercase; transition: color ease-out 300ms; }
+
+.attachment_link:link { color: #20232A; }
+
+.attachment_link:visited { color: #a88e90; }
+
+.attachment_link:hover { color: #A01D26; }
+
 a:link { color: #20232A; }
 
 a:visited { color: #A01D26; }
 
-a:active { color: #ACBEBE; }
-
 a:hover { color: #ACBEBE; }
+
+a:active { color: #ACBEBE; }
 
 h1 { grid-column: 2 / 9; font-family: "Pathway Gothic One", sans-serif; color: #20232A; margin: 0; }
 

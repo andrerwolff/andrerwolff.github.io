@@ -1,3 +1,7 @@
+---
+
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,7 +17,15 @@
         <h1 class="title"> {{ page.title }} </h1>
         <p class="sub-title"> {{ page.date | date_to_string: "ordinal", "US" }} </p> 
       </div>
-      <div class="content">{{ content }}</div>
+      <div class="content">{{ content }}
+        {% if page.attachments %}
+        <h2><u>Attachments:</u></h2><br>
+          {% assign attachments = page.attachments | split: "; " %}
+          {% for attachment in attachments %}
+            <a class="attachment_link" href="/assets/docs/{{page.attachment_path}}{{ attachment }}" target="_blank">{{attachment}}</a><br>
+          {% endfor %}
+        {% endif %}
+    </div>
       <footer>
         <p>
           <a href="/"> Home</a>
