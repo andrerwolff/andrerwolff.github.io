@@ -1,4 +1,4 @@
-I"!<h3 id="emotional-intelligence-and-the-importance-of-self-management">Emotional Intelligence and the Importance of Self Management</h3>
+I"�%<h3 id="emotional-intelligence-and-the-importance-of-self-management">Emotional Intelligence and the Importance of Self Management</h3>
 <hr />
 <hr />
 <ul>
@@ -55,21 +55,21 @@
       <thead>
         <tr>
           <th style="text-align: left">Hallmarks of Emotionally Intelligent Org</th>
-          <th> </th>
+          <th style="text-align: left"> </th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td style="text-align: left">Strong sense of trust</td>
-          <td>People can have difficult conversations</td>
+          <td style="text-align: left">People can have difficult conversations</td>
         </tr>
         <tr>
           <td style="text-align: left">Teams unafraid to take initiative</td>
-          <td>People active in diversity and inclusion</td>
+          <td style="text-align: left">People active in diversity and inclusion</td>
         </tr>
         <tr>
           <td style="text-align: left">Committed to goals and values</td>
-          <td>Curiosity is common.</td>
+          <td style="text-align: left">Curiosity is common.</td>
         </tr>
       </tbody>
     </table>
@@ -79,30 +79,30 @@
       <thead>
         <tr>
           <th style="text-align: left">Key Skills to Develop</th>
-          <th> </th>
-          <th> </th>
+          <th style="text-align: left"> </th>
+          <th style="text-align: left"> </th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td style="text-align: left">Self Assessment</td>
-          <td>Emotional Self-Awareness</td>
-          <td>Self-Regard</td>
+          <td style="text-align: left">Emotional Self-Awareness</td>
+          <td style="text-align: left">Self-Regard</td>
         </tr>
         <tr>
           <td style="text-align: left">Optimism</td>
-          <td>Impulse Control</td>
-          <td>Adaptable/Flexible</td>
+          <td style="text-align: left">Impulse Control</td>
+          <td style="text-align: left">Adaptable/Flexible</td>
         </tr>
         <tr>
           <td style="text-align: left">Authenticity</td>
-          <td>Personal Drive</td>
-          <td>Empathy</td>
+          <td style="text-align: left">Personal Drive</td>
+          <td style="text-align: left">Empathy</td>
         </tr>
         <tr>
           <td style="text-align: left">Communication</td>
-          <td>Coaching Others</td>
-          <td> </td>
+          <td style="text-align: left">Coaching Others</td>
+          <td style="text-align: left"> </td>
         </tr>
       </tbody>
     </table>
@@ -199,7 +199,31 @@
 <hr />
 <hr />
 <ul>
-  <li>Text</li>
+  <li>Employee performance optimization is not enough in a growing team based, global, and complex business environment.</li>
+  <li>Groups tend to innovate faster, see mistakes more quickly, and find better solutions.</li>
+  <li>Project Aristotle studied 180 teams at google looking for various factors tht determine group performance. Almost no patters were found based on typical metrics (hobbies, gender, backgrounds, extroverts/introverts).</li>
+  <li>
+    <dl>
+      <dt>Group Norm</dt>
+      <dd>Traditions, behavioral standards and unwritten rules that govern how we function when we gather.</dd>
+    </dl>
+  </li>
+  <li>Group norms typically override individual proclivities.</li>
+  <li>The ‘right’ group norms can raise the collective intelligence, ‘wrong’ norms can hobble a group of otherwise exceptionally bright members.</li>
+  <li>Of various norms successful groups had similar attributes:
+    <ul>
+      <li>Equality in distribution of conversational turn-taking.</li>
+      <li>High average social sensitivity.</li>
+      <li>
+        <dl>
+          <dt>Psychological safety</dt>
+          <dd>A sense of confidence that the team will not embarrass, reject or punish someone for speaking up. Interpersonal trust and mutual respect where people are comfortable with being themselves.</dd>
+        </dl>
+      </li>
+      <li>All Google’s intense data collection and number crunching led it to the same conclusions that good managers have always known: In the best teams, members listen to one another and show sensitivity to feelings and needs.</li>
+      <li>Follow your gut.</li>
+    </ul>
+  </li>
 </ul>
 
 <hr />
@@ -223,14 +247,5 @@
 </ul>
 
 <hr />
-<p>Attend a technical conference
-Join a professional organization
-Take on role of Project Engineer on small to medium sized projects – continue getting more experience on all aspects of project life-cycle.
-Become assistant PM on a Wastewater of Surface water project
-Improve Technical Writing/Write a technical report
-Work on understanding manageable workload - self management
-Work on delegation skills - work with young engineers on work delegation and mentoring
-Help implement new vision for Water Office personnel organization/culture.
-Increase knowledge/skills on inspection and construction management. Have two lunch and learns with the inspection team about construction/inspection topics.
-Increase my work/exposure with Water/Wastewater projects</p>
+
 :ET

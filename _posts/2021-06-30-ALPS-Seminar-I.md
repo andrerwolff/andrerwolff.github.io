@@ -40,14 +40,14 @@ attachments: Emotional Intelligence and the Importance of Self Management.pdf; U
 - Good side effect is increased perspective when strategy planning and making difficult decisions.
   
 - | Hallmarks of Emotionally Intelligent Org |
-    | :---|
+    | :--- | :--- |
     | Strong sense of trust | People can have difficult conversations |
     | Teams unafraid to take initiative | People active in diversity and inclusion |
     |Committed to goals and values | Curiosity is common. |
 
 
 - | Key Skills to Develop |
-    | :--- |
+    | :--- | :--- | :--- |
     | Self Assessment | Emotional Self-Awareness | Self-Regard |
     | Optimism | Impulse Control | Adaptable/Flexible |
     | Authenticity | Personal Drive | Empathy |
