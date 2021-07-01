@@ -106,7 +106,20 @@ attachments: Emotional Intelligence and the Importance of Self Management.pdf; U
 ### What Google Learned from its Quest to Build the Perfect Team
 ---
 ---
-- Text
+- Employee performance optimization is not enough in a growing team based, global, and complex business environment.
+- Groups tend to innovate faster, see mistakes more quickly, and find better solutions.
+- Project Aristotle studied 180 teams at google looking for various factors tht determine group performance. Almost no patters were found based on typical metrics (hobbies, gender, backgrounds, extroverts/introverts).
+- Group Norm
+  : Traditions, behavioral standards and unwritten rules that govern how we function when we gather.
+- Group norms typically override individual proclivities.
+- The 'right' group norms can raise the collective intelligence, 'wrong' norms can hobble a group of otherwise exceptionally bright members.
+- Of various norms successful groups had similar attributes:
+  - Equality in distribution of conversational turn-taking.
+  - High average social sensitivity.
+  - Psychological safety
+    : A sense of confidence that the team will not embarrass, reject or punish someone for speaking up. Interpersonal trust and mutual respect where people are comfortable with being themselves.
+  - All Google's intense data collection and number crunching led it to the same conclusions that good managers have always known: In the best teams, members listen to one another and show sensitivity to feelings and needs.
+  - Follow your gut. 
 
 ---
 
@@ -124,13 +137,4 @@ attachments: Emotional Intelligence and the Importance of Self Management.pdf; U
 - Training managers in EI leads to reduced turnover, absenteeism, and increased engagement, sales performance, and productivity.
 
 ---
-Attend a technical conference
-Join a professional organization
-Take on role of Project Engineer on small to medium sized projects – continue getting more experience on all aspects of project life-cycle.
-Become assistant PM on a Wastewater of Surface water project
-Improve Technical Writing/Write a technical report
-Work on understanding manageable workload - self management
-Work on delegation skills - work with young engineers on work delegation and mentoring
-Help implement new vision for Water Office personnel organization/culture.
-Increase knowledge/skills on inspection and construction management. Have two lunch and learns with the inspection team about construction/inspection topics.
-Increase my work/exposure with Water/Wastewater projects
+
