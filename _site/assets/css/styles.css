@@ -35,7 +35,7 @@ article { height: 100%; margin: 0; font-family: "Cardo", serif; display: grid; g
 
 .blog__title:hover { color: #ACBEBE; }
 
-.blog__link { font-family: "Pathway Gothic One", sans-serif; display: inline-block; background: #a88e90; color: #20232A; padding: .5em 1.5em; text-decoration: none; text-transform: uppercase; margin-top: 1em; transition: background 300ms, color 600ms ease-out; }
+.blog__link { font-family: "Pathway Gothic One", sans-serif; display: inline-block; border-radius: 2px; background: #a88e90; color: #20232A; padding: .5em 1.5em; text-decoration: none; text-transform: uppercase; margin-top: 1em; transition: background 300ms, color 600ms ease-out; }
 
 .blog__link:visited { color: #20232A; }
 

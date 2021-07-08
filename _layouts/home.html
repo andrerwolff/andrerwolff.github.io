@@ -7,7 +7,7 @@ layout: default
   <h2>Most Recent Post:</h2>
     {% for post in site.posts limit:1 %}
     <div class="blog-post">
-      <a class="blog__title" href="{{post.url }}">{{ post.title }} - {{post.date | date_to_string: "ordinal", "US" }}</a></h2>
+      <a class="blog__title" href="{{post.url }}">{{ post.title }} - {{post.date | date_to_string: "ordinal", "US" }}</a>
       <p>
         {% if post.snip  == 'excerpt' %} 
           {{post.excerpt}}
@@ -17,6 +17,12 @@ layout: default
       </p>
     </div>
     {% endfor %}
+    <a class="blog__link" href="/blog">See all posts</a>
+  <h2>Throw Back Blog:</h2>
+    <div class="blog-post">
+      <a class="blog__title" href="https://andrerwolff.wordpress.com/">Adventures in Uganda</a>
+    </div>
+  </h2>
 </section>
 
 <section class="older-posts">

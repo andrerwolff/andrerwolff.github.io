@@ -1,0 +1,46 @@
+---
+title: Blog
+description: It's like reading my mind or something...
+layout: default
+footer: <a href="/"> Home</a>
+---
+<!-- 
+<section class="last-post">
+  <h2>Posts:</h2>
+    {% for post in site.posts %}
+    <div class="blog-post">
+      <a class="blog__title" href="{{post.url }}">{{ post.title }} - {{post.date | date_to_string: "ordinal", "US" }}</a>
+      <p>
+        {% if post.snip  == 'excerpt' %} 
+          {{post.excerpt}}
+        {% else %}
+          {{post.snip}}
+        {% endif %}
+      </p><br>
+    </div>
+    {% endfor %}
+  </section>
+-->
+
+<section class="last-post">
+  {% assign sorted_categories = site.categories | sort %}
+  {% for category in sorted_categories %}
+    {% assign category_path = category | first %} 
+    {% assign category_split = category_path | split: "/" %}
+    {% assign category_name = category_split | last%}
+  <h2>{{category_name}}:</h2><br>
+    {% for post in site.categories[category_path] %}
+    <div class="blog-post">
+      <a class="blog__title" href="{{ post.url }}">{{post.date | date_to_string: "ordinal", "US" }} - {{ post.title }}</a>
+      <p>
+        {% if post.snip  == 'excerpt' %} 
+          {{post.excerpt}}
+        {% else %}
+          {{post.snip}}
+        {% endif %}
+      </p><br>
+    </div>
+    {% endfor %}
+  {% endfor %}
+</section>
+

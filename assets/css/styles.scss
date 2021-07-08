@@ -111,6 +111,7 @@ article {
 .blog__link {
     font-family: $ff-ss;
     display: inline-block;
+    border-radius: 2px;
     background: mix($clr-accent, $clr-gray, 30%);
     color: $clr-dark;
     padding: .5em 1.5em;
