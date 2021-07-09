@@ -19,7 +19,7 @@ article { height: 100%; margin: 0; font-family: "Cardo", serif; display: grid; g
 
 .last-post { background: #F4F4EF; grid-column: 3 / 7; color: #20232A; }
 
-.older-posts { background: #20232A; grid-column: 1 / 9; padding: 2em 0; color: #ACBEBE; display: grid; grid-template-columns: inherit; gap: inherit; }
+.older-posts { background: #20232A; grid-column: 1 / 9; padding: 2em 0; color: #ACBEBE; display: grid; grid-template-columns: inherit; gap: inherit; margin-top: 2em; }
 
 .older-posts h2 { grid-column: 2 / 8; color: #4a5256; margin-top: 0; }
 
@@ -40,6 +40,8 @@ article { height: 100%; margin: 0; font-family: "Cardo", serif; display: grid; g
 .blog__link:visited { color: #20232A; }
 
 .blog__link:hover { background: #a23d44; color: #F4F4EF; }
+
+.commentbox { grid-column: 3 / 7; }
 
 .attachment_link { font-family: "Pathway Gothic One", sans-serif; font-size: 1.25em; color: #A01D26; line-height: 1; text-decoration: none; text-transform: uppercase; transition: color ease-out 300ms; }
 

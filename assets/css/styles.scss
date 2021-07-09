@@ -69,6 +69,7 @@ article {
     display: grid;
     grid-template-columns: inherit;
     gap: inherit;
+    margin-top: 2em;
 
     h2 {
         grid-column: 2 / 8;
@@ -127,6 +128,10 @@ article {
         background: mix($clr-accent, $clr-gray, 80%);
         color: $clr-off_white;
     }
+}
+
+.commentbox {
+    grid-column: 3 / 7;
 }
 
 .attachment_link {
