@@ -86,7 +86,7 @@ function handleFileSelect(e, fileType) {
 
 function processFile(file, fileType) {
     // Validate file type
-    const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+    const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain'];
     if (!allowedTypes.includes(file.type)) {
         alert('Please upload a PDF, DOC, or DOCX file.');
         return;
@@ -138,89 +138,81 @@ function updateGetReportButton() {
     button.disabled = !hasBothFiles;
 }
 
-function generateReport() {
+async function generateReport() {
     if (!uploadedFiles.submittal || !uploadedFiles.spec) {
         alert('Please upload both a submittal and a spec file.');
         return;
     }
-    
-    // Simulate report generation
-    const loadingText = 'Generating Report...';
+
     const button = document.querySelector('.get-report-button');
     const originalText = button.innerHTML;
-    
-    button.innerHTML = loadingText;
+    button.innerHTML = 'Generating Report...';
     button.disabled = true;
-    
-    // Simulate processing time
-    setTimeout(() => {
-        // Save to recent reviews
-        saveToRecentReviews();
-        
-        // Show success message
-        alert('Report generated successfully! This is a demo - no actual AI processing occurred.');
-        
-        // Reset button
+
+    try {
+        const specText = await uploadedFiles.spec.text();
+        const formData = new FormData();
+        formData.append('spec_text', specText);
+        formData.append('submittal', uploadedFiles.submittal);
+
+        const response = await fetch('https://triplo-ebu1.onrender.com/generate_review', {
+            method: 'POST',
+            body: formData
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to generate review');
+        }
+
+        const data = await response.json();
+        saveToRecentReviews(data.review);
+        alert('Report generated successfully!');
+        showScreen('home-screen');
+        console.log(data.review);
+    } catch (error) {
+        alert('Error generating report: ' + error.message);
+    } finally {
         button.innerHTML = originalText;
         button.disabled = false;
-        
-        // Go back to home screen
-        showScreen('home-screen');
-        
-        // Clear files
         uploadedFiles = { submittal: null, spec: null };
-        document.querySelectorAll('.file-info').forEach(info => {
-            info.style.display = 'none';
-        });
-        document.querySelectorAll('input[type="file"]').forEach(input => {
-            input.value = '';
-        });
+        document.querySelectorAll('.file-info').forEach(info => info.style.display = 'none');
+        document.querySelectorAll('input[type="file"]').forEach(input => input.value = '');
         updateGetReportButton();
-        
-    }, 2000);
+    }
 }
 
 // Recent reviews management
-function saveToRecentReviews() {
+function saveToRecentReviews(review) {
     const reviews = JSON.parse(sessionStorage.getItem('recentReviews') || '[]');
     const timestamp = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    
     const newReview = {
         name: `Review ${reviews.length + 1}`,
         timestamp: timestamp,
-        date: new Date().toISOString()
+        date: new Date().toISOString(),
+        content: review
     };
-    
-    // Add to beginning of array
     reviews.unshift(newReview);
-    
-    // Keep only last 10 reviews
-    if (reviews.length > 10) {
-        reviews.pop();
-    }
-    
+    if (reviews.length > 10) reviews.pop();
     sessionStorage.setItem('recentReviews', JSON.stringify(reviews));
 }
 
 function updateRecentReviews() {
     const reviews = JSON.parse(sessionStorage.getItem('recentReviews') || '[]');
     const reviewItems = document.querySelector('.review-items');
-    
     if (reviews.length === 0) {
         reviewItems.innerHTML = '<p style="color: #999; text-align: center; padding: 20px;">No reviews yet</p>';
         return;
     }
-    
     reviewItems.innerHTML = reviews.map(review => 
-        `<button class="review-item">${review.name} ${review.timestamp}</button>`
+        `<button class="review-item" data-review="${encodeURIComponent(review.content)}">${review.name} ${review.timestamp}</button>`
     ).join('');
 }
 
 // Add click handlers for recent review items
 document.addEventListener('click', function(e) {
     if (e.target.classList.contains('review-item')) {
-        // For demo purposes, just show an alert
-        alert('This would open the review details. In a real app, this would load the saved review data.');
+        const reviewContent = decodeURIComponent(e.target.dataset.review);
+        alert('Review Content:\n' + reviewContent);
     }
 });
 
