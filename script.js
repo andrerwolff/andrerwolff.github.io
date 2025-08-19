@@ -11,6 +11,8 @@ function showScreen(screenId) {
     // Update recent reviews if going to home screen
     if (screenId === 'home-screen') {
         updateRecentReviews();
+    } else if (screenId === 'report-screen') {
+        document.getElementById('report-content').textContent = reviewContent;
     }
 }
 
@@ -166,9 +168,7 @@ async function generateReport() {
 
         const data = await response.json();
         saveToRecentReviews(data.review);
-        alert('Report generated successfully!');
-        showScreen('home-screen');
-        console.log(data.review);
+        showScreen('report-screen', data.review);
     } catch (error) {
         alert('Error generating report: ' + error.message);
     } finally {
@@ -212,7 +212,7 @@ function updateRecentReviews() {
 document.addEventListener('click', function(e) {
     if (e.target.classList.contains('review-item')) {
         const reviewContent = decodeURIComponent(e.target.dataset.review);
-        alert('Review Content:\n' + reviewContent);
+        showScreen('report-screen', reviewContent);
     }
 });
 

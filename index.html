@@ -112,7 +112,7 @@
                 <div class="upload-area" id="spec-upload">
                     <div class="upload-content">
                         <p>Drag and drop file here</p>
-                        <p class="file-requirements">Limit 200MB per file • PDF, DOC, DOCX</p>
+                        <p class="file-requirements">Limit 200MB per file • PDF, DOC, DOCX, TXT</p>
                     </div>
                     <input type="file" id="spec-file" accept=".pdf,.doc,.docx" style="display: none;">
                     <button class="browse-button" onclick="document.getElementById('spec-file').click()">Browse Files</button>
@@ -131,6 +131,23 @@
                     Get Report
                     <span class="arrow">→</span>
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="report-screen" class="screen">
+        <header class="header">
+            <div class="logo">
+                <img class="logo-img" src="https://via.placeholder.com/100x32" alt="Triplo Logo">
+            </div>
+        </header>
+        <div class="review-container">
+            <div class="report-section">
+                <h2>Submittal Review Report</h2>
+                <div id="report-content" class="report-content"></div>
+                <div class="button-container">
+                    <button class="back-button" onclick="showScreen('home-screen')">← Back to Home</button>
+                </div>
             </div>
         </div>
     </div>
