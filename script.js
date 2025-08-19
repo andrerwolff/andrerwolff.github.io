@@ -1,14 +1,9 @@
 // Screen management
-function showScreen(screenId) {
-    // Hide all screens
+function showScreen(screenId, reviewContent = '') {
     document.querySelectorAll('.screen').forEach(screen => {
         screen.classList.remove('active');
     });
-    
-    // Show the target screen
     document.getElementById(screenId).classList.add('active');
-    
-    // Update recent reviews if going to home screen
     if (screenId === 'home-screen') {
         updateRecentReviews();
     } else if (screenId === 'report-screen') {
@@ -17,12 +12,8 @@ function showScreen(screenId) {
 }
 
 // File handling
-let uploadedFiles = {
-    submittal: null,
-    spec: null
-};
+let uploadedFiles = { submittal: null, spec: null };
 
-// Initialize drag and drop functionality
 document.addEventListener('DOMContentLoaded', function() {
     initializeDragAndDrop();
     initializeFileInputs();
@@ -30,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function initializeDragAndDrop() {
     const uploadAreas = document.querySelectorAll('.upload-area');
-    
     uploadAreas.forEach(area => {
         area.addEventListener('dragover', handleDragOver);
         area.addEventListener('drop', handleDrop);
@@ -42,7 +32,6 @@ function initializeDragAndDrop() {
 function initializeFileInputs() {
     const submittalInput = document.getElementById('submittal-file');
     const specInput = document.getElementById('spec-file');
-    
     submittalInput.addEventListener('change', (e) => handleFileSelect(e, 'submittal'));
     specInput.addEventListener('change', (e) => handleFileSelect(e, 'spec'));
 }
@@ -67,10 +56,8 @@ function handleDragLeave(e) {
 function handleDrop(e) {
     e.preventDefault();
     e.stopPropagation();
-    
     const area = e.currentTarget;
     area.classList.remove('dragover');
-    
     const files = e.dataTransfer.files;
     if (files.length > 0) {
         const file = files[0];
@@ -87,56 +74,40 @@ function handleFileSelect(e, fileType) {
 }
 
 function processFile(file, fileType) {
-    // Validate file type
     const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'text/plain'];
     if (!allowedTypes.includes(file.type)) {
-        alert('Please upload a PDF, DOC, or DOCX file.');
+        alert('Please upload a PDF, DOC, DOCX, or TXT file.');
         return;
     }
-    
-    // Validate file size (200MB limit)
-    const maxSize = 200 * 1024 * 1024; // 200MB in bytes
+    const maxSize = 200 * 1024 * 1024; // 200MB
     if (file.size > maxSize) {
         alert('File size must be less than 200MB.');
         return;
     }
-    
-    // Store file
     uploadedFiles[fileType] = file;
-    
-    // Update UI
     displayFileInfo(file, fileType);
-    
-    // Update button state
     updateGetReportButton();
 }
 
 function displayFileInfo(file, fileType) {
     const fileInfo = document.getElementById(`${fileType}-file-info`);
     const filename = fileInfo.querySelector('.filename');
-    
     filename.textContent = file.name;
     fileInfo.style.display = 'flex';
 }
 
 function removeFile(fileType) {
     uploadedFiles[fileType] = null;
-    
     const fileInfo = document.getElementById(`${fileType}-file-info`);
     fileInfo.style.display = 'none';
-    
-    // Clear file input
     const fileInput = document.getElementById(`${fileType}-file`);
     fileInput.value = '';
-    
-    // Update button state
     updateGetReportButton();
 }
 
 function updateGetReportButton() {
     const button = document.querySelector('.get-report-button');
     const hasBothFiles = uploadedFiles.submittal && uploadedFiles.spec;
-    
     button.disabled = !hasBothFiles;
 }
 
@@ -181,7 +152,6 @@ async function generateReport() {
     }
 }
 
-// Recent reviews management
 function saveToRecentReviews(review) {
     const reviews = JSON.parse(sessionStorage.getItem('recentReviews') || '[]');
     const timestamp = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
@@ -208,7 +178,6 @@ function updateRecentReviews() {
     ).join('');
 }
 
-// Add click handlers for recent review items
 document.addEventListener('click', function(e) {
     if (e.target.classList.contains('review-item')) {
         const reviewContent = decodeURIComponent(e.target.dataset.review);
@@ -216,11 +185,7 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// Initialize the app
 document.addEventListener('DOMContentLoaded', function() {
-    // Start with intro screen
     showScreen('intro-screen');
-    
-    // Load any existing recent reviews
     updateRecentReviews();
 });
