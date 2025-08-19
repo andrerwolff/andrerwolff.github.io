@@ -1,28 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello World</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f0f0f0;
-    }
-    h1 {
-      color: #333;
-      font-size: 48px;
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sbmtl - Submittal Review Tool</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Hello World!</h1>
-  <p>Welcome to my first website on GitHub Pages.</p>
+    <!-- Intro/Onboarding Screen -->
+    <div id="intro-screen" class="screen active">
+        <div class="intro-container">
+            <div class="intro-left">
+                <div class="hero-image">
+                    <img src="images/heroimg.png" alt="Hero Image">
+                </div>
+            </div>
+            <div class="intro-right">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="Sbmtl Logo" class="logo-img">
+                </div>
+                <h1 class="headline">It's a <span class="outlined-text">new era</span> for<br>reviewing submittals.</h1>
+                <p class="description">Sbmtl helps you quickly check if submittals meet project specs. Fast, simple, smart.</p>
+                
+                <div class="how-it-works">
+                    <h3>How it works</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <span>Upload a submittal</span>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <span>Upload the relevant spec</span>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <span>Get a quick AI-generated report.</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="cta-button" onclick="showScreen('home-screen')">
+                    Get Started
+                    <span class="arrow">→</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Screen -->
+    <div id="home-screen" class="screen">
+        <div class="header">
+            <div class="logo">
+                <img src="images/logo.svg" alt="Sbmtl Logo" class="logo-img">
+            </div>
+        </div>
+        
+        <div class="content-container">
+            <div class="new-review-section">
+                <h2>Upload submittals and spec sections to quickly check compliance.</h2>
+                <p>Triplo helps you quickly check if submittals meet project specs—fast, simple, no fuss.</p>
+                <p>How it works: Upload a submittal, upload the relevant spec, get a quick AI-generated report.</p>
+                <button class="cta-button" onclick="showScreen('review-screen')">
+                    Start new Review
+                    <span class="arrow">→</span>
+                </button>
+            </div>
+            
+            <div class="recent-reviews-section">
+                <h3>Recent Reviews</h3>
+                <p class="disclaimer">This is a lightweight proof-of-concept and does not save data permanently.</p>
+                <div class="review-items">
+                    <button class="review-item">Concrete Submittal 10:35am</button>
+                    <button class="review-item">Concrete Submittal 10:35am</button>
+                    <button class="review-item">Concrete Submittal 10:35am</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Screen -->
+    <div id="review-screen" class="screen">
+        <div class="header">
+            <div class="logo">
+                <img src="images/logo.svg" alt="Sbmtl Logo" class="logo-img">
+            </div>
+        </div>
+        
+        <div class="review-container">
+            <div class="upload-section">
+                <h3>Upload Submittal</h3>
+                <div class="upload-area" id="submittal-upload">
+                    <div class="upload-content">
+                        <p>Drag and drop file here</p>
+                        <p class="file-requirements">Limit 200MB per file • PDF, DOC, DOCX</p>
+                    </div>
+                    <input type="file" id="submittal-file" accept=".pdf,.doc,.docx" style="display: none;">
+                    <button class="browse-button" onclick="document.getElementById('submittal-file').click()">Browse Files</button>
+                </div>
+                <div id="submittal-file-info" class="file-info" style="display: none;">
+                    <span class="filename"></span>
+                    <button class="remove-file" onclick="removeFile('submittal')">×</button>
+                </div>
+            </div>
+            
+            <div class="upload-section">
+                <h3>Upload Spec Section</h3>
+                <div class="upload-area" id="spec-upload">
+                    <div class="upload-content">
+                        <p>Drag and drop file here</p>
+                        <p class="file-requirements">Limit 200MB per file • PDF, DOC, DOCX</p>
+                    </div>
+                    <input type="file" id="spec-file" accept=".pdf,.doc,.docx" style="display: none;">
+                    <button class="browse-button" onclick="document.getElementById('spec-file').click()">Browse Files</button>
+                </div>
+                <div id="spec-file-info" class="file-info" style="display: none;">
+                    <span class="filename"></span>
+                    <button class="remove-file" onclick="removeFile('spec')">×</button>
+                </div>
+            </div>
+            
+            <div class="button-container">
+                <button class="back-button" onclick="showScreen('home-screen')">
+                    ← Back
+                </button>
+                <button class="get-report-button" onclick="generateReport()">
+                    Get Report
+                    <span class="arrow">→</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
