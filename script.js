@@ -7,7 +7,7 @@ function showScreen(screenId, reviewContent = '') {
     if (screenId === 'home-screen') {
         updateRecentReviews();
     } else if (screenId === 'report-screen') {
-        document.getElementById('report-content').textContent = reviewContent;
+        document.getElementById('report-content').innerHTML = marked.parse(reviewContent);
     }
 }
 
